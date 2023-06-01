@@ -1,0 +1,43 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: traefik-deployment
+  labels:
+    app: traefik
+
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: traefik
+  template:
+    metadata:
+      labels:
+        app: traefik
+    spec:
+      serviceAccountName: traefik-service-account
+      containers:
+        - name: traefik
+          image: traefik:v2.10
+          ports:
+            - name: http
+              containerPort: 80
+            - name: https
+              containerPort: 443
+            - name: dashboard
+              containerPort: 8080
+          args:
+            - --api.insecure
+            #- --api.dashboard
+            - --providers.kubernetescrd
+            - --providers.kubernetescrd.ingressclass=traefik-internal
+            - --entryPoints.web.address=:80
+            - --entryPoints.websecure.address=:443
+            #- --entrypoints.web.http.redirections.entryPoint.to=websecure
+            #- --entrypoints.web.http.redirections.entryPoint.scheme=https
+            - --log.level=debug
+
+            # Let's Encrypt Configurtion.
+            #- --certificatesresolvers.default.acme.email=<YOUR_EMAIL>
+            #- --certificatesresolvers.default.acme.storage=acme.json
+            #- --certificatesresolvers.default.acme.tlschallenge
