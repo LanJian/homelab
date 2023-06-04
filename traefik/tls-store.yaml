@@ -5,4 +5,4 @@ metadata:
 
 spec:
   defaultCertificate:
-    secretName: lanjian-io-staging-tls
+    secretName: lanjian-io-production-tls
