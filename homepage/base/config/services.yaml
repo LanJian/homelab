@@ -1,9 +1,9 @@
 - Media:
-  #- Jellyfin:
-      #icon: jellyfin.png
-      #href: http://chiark.home:8096
-      #ping: http://chiark.home:8096
-      #description: Media server.
+  - Plex:
+      icon: plex.png
+      href: http://192.168.0.118:32400
+      ping: http://192.168.0.118:32400
+      description: Media server.
 
   #- Stump:
       #icon: /icons/stump-logo--irregular.png
