@@ -15,3 +15,5 @@ spec:
       services:
         - name: ntfy-service
           port: 80
+  tls:
+    secretName: lanjian-io-production-tls
