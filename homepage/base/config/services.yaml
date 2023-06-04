@@ -29,11 +29,11 @@
       #ping: https://prowlarr.hl.ancalagon.black
       #description: Indexer management.
 
-  #- Jellyseerr:
-      #icon: jellyseerr.png
-      #href: https://jellyseerr.hl.ancalagon.black
-      #ping: https://jellyseerr.hl.ancalagon.black
-      #description: Media requests.
+  - Jellyseerr:
+      icon: jellyseerr.png
+      href: https://jellyseerr.lanjian.io
+      ping: https://jellyseerr.lanjian.io
+      description: Media requests.
       #widget:
         #type: jellyseerr
         #url: https://jellyseerr.hl.ancalagon.black
