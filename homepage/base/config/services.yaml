@@ -94,8 +94,8 @@
 
   - pi-hole:
       icon: pi-hole.png
-      href: http://192.168.0.124/admin
-      ping: http://192.168.0.124/admin
+      href: http://192.168.0.124:8888/admin
+      ping: http://192.168.0.124:8888/admin
       description: DNS server and adblocker.
       #widget:
         #type: pihole
@@ -110,8 +110,8 @@
       description: GitOps deploys for kubernetes cluster.
   - traefik-internal:
       icon: traefik.png
-      href: https://traefik.lanjian.io
-      ping: https://traefik.lanjian.io
+      href: http://traefik.lanjian.io
+      ping: http://traefik.lanjian.io
       description: internal reverse proxy routing dashboard.
   #- traefik-external:
       #icon: traefik.png
