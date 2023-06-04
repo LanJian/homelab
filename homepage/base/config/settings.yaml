@@ -1,0 +1,10 @@
+#background:
+  #image: /images/ac1.jpg
+  #opacity: 20
+
+#color: zinc
+
+#layout:
+  #Media:
+    #style: row
+    #columns: 5

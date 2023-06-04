@@ -1,0 +1,57 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: homepage
+  namespace: homepage
+  labels:
+    app.kubernetes.io/name: homepage
+spec:
+  revisionHistoryLimit: 3
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: homepage
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: homepage
+    spec:
+      serviceAccountName: homepage
+      automountServiceAccountToken: true
+      dnsPolicy: "None"
+      dnsConfig:
+        nameservers:
+          - 192.168.0.124
+      enableServiceLinks: true
+      containers:
+        - name: homepage
+          image: "ghcr.io/benphelps/homepage:latest"
+          imagePullPolicy: Always
+          ports:
+            - name: http
+              containerPort: 3000
+              protocol: TCP
+          volumeMounts:
+            - name: homepage-config
+              mountPath: /app/config
+            - name: logs
+              mountPath: /app/config/logs
+            - name: homepage-icons
+              mountPath: /app/public/icons
+            - name: homepage-images
+              mountPath: /app/public/images
+      volumes:
+        - configMap:
+            name: homepage
+          name: homepage-config
+        - name: logs
+          emptyDir:
+            {}
+        - name: homepage-icons
+          persistentVolumeClaim:
+            claimName: homepage-icons-pvc
+        - name: homepage-images
+          persistentVolumeClaim:
+            claimName: homepage-images-pvc
