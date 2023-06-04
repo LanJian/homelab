@@ -2,6 +2,8 @@ apiVersion: v1
 kind: Service
 metadata:
   name: traefik-dashboard-service
+  annotations:
+    metallb.universe.tf/loadBalancerIPs: 192.168.0.3
 
 spec:
   type: LoadBalancer
@@ -15,11 +17,17 @@ apiVersion: v1
 kind: Service
 metadata:
   name: traefik-http-service
+  annotations:
+    metallb.universe.tf/loadBalancerIPs: 192.168.0.4
 
 spec:
   type: LoadBalancer
   ports:
     - targetPort: http
+      name: web
       port: 80
+    - targetPort: https
+      name: websecure
+      port: 443
   selector:
     app: traefik

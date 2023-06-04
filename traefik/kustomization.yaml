@@ -2,11 +2,17 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-- cluster-role.yaml
-- cluster-role-binding.yaml
-- service-account.yaml
-- deployment.yaml
-- services.yaml
+  - cluster-role.yaml
+  - cluster-role-binding.yaml
+  - service-account.yaml
+  - deployment.yaml
+  - services.yaml
+  - tls-store.yaml
+
+configMapGenerator:
+  - name: static-config
+    files:
+      - traefik.yaml
 
 namespace: kube-system
 

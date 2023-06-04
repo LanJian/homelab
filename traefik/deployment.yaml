@@ -26,18 +26,11 @@ spec:
               containerPort: 443
             - name: dashboard
               containerPort: 8080
-          args:
-            - --api.insecure
-            #- --api.dashboard
-            - --providers.kubernetescrd
-            - --providers.kubernetescrd.ingressclass=traefik-internal
-            - --entryPoints.web.address=:80
-            - --entryPoints.websecure.address=:443
-            #- --entrypoints.web.http.redirections.entryPoint.to=websecure
-            #- --entrypoints.web.http.redirections.entryPoint.scheme=https
-            - --log.level=debug
-
-            # Let's Encrypt Configurtion.
-            #- --certificatesresolvers.default.acme.email=<YOUR_EMAIL>
-            #- --certificatesresolvers.default.acme.storage=acme.json
-            #- --certificatesresolvers.default.acme.tlschallenge
+          volumeMounts:
+            - mountPath: /etc/traefik/traefik.yaml
+              subPath: traefik.yaml
+              name: config-volume
+      volumes:
+        - name: config-volume
+          configMap:
+            name: static-config

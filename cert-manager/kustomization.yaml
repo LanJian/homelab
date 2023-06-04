@@ -1,0 +1,13 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - https://github.com/cert-manager/cert-manager/releases/download/v1.12.0/cert-manager.yaml
+  - cluster-issuer.yaml
+  - certificate.yaml
+patches:
+  - path: dns-config.patch.yaml
+  - path: dns-args.patch.yaml
+    target: 
+      kind: Deployment
+      name: cert-manager
