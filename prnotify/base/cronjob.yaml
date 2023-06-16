@@ -1,0 +1,40 @@
+---
+# yaml-language-server: $schema=https://kubernetesjsonschema.dev/master/cronjob.json
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: cronjob
+spec:
+  schedule: "*/5 * * * *"
+  concurrencyPolicy: Replace
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          restartPolicy: Never
+          containers:
+            - name: prnotify
+              image: jackhxs/prnotify:latest
+              imagePullPolicy: Always # fixme
+              volumeMounts:
+                - name: settings
+                  mountPath: /etc/prnotify
+                - name: firefox-cookies
+                  mountPath: /opt/prnotify/cookies.sqlite
+                  readOnly: true
+                - name: cache
+                  mountPath: /var/cache/prnotify
+          volumes:
+            - name: settings
+              configMap:
+                name: prnotify
+                items:
+                  - key: settings.toml
+                    path: prnotify.toml
+            - name: firefox-cookies
+              hostPath:
+                path: /home/jackhxs/.mozilla/firefox/fq5qlp54.default-release/cookies.sqlite
+                type: File
+            - name: cache
+              persistentVolumeClaim:
+                claimName: cache-pvc
