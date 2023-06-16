@@ -16,6 +16,11 @@ spec:
             - name: prnotify
               image: jackhxs/prnotify:latest
               imagePullPolicy: Always # fixme
+              envFrom:
+                - configMapRef:
+                    name: secret-sentinel
+                - secretRef:
+                    name: prnotify-sealed-secret
               volumeMounts:
                 - name: settings
                   mountPath: /etc/prnotify
