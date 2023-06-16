@@ -1,0 +1,11 @@
+[github]
+hostname = "api.github.com"
+username = "lanjian"
+
+[ntfy]
+base_url = "https://ntfy.lanjian.io"
+
+topic = "github-prnotify"
+
+[cache]
+path = "/var/cache/prnotify/prnotify.json"
