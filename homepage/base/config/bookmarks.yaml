@@ -6,7 +6,7 @@
     - icon: rust.png
       href: https://crates.io
   - tailscale:
-      icon: tailscale.png
+    - icon: tailscale.png
       href: https://login.tailscale.com/admin
 
 - Social:
