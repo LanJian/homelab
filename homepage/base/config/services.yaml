@@ -115,12 +115,6 @@
       ping: http://traefik.lanjian.io
       description: Internal reverse proxy routing dashboard.
 
-  - tailscale:
-      icon: tailscale.png
-      href: https://login.tailscale.com/admin
-      ping: https://login.tailscale.com/admin
-      description: VPN admin dashboard.
-
   #- traefik-external:
       #icon: traefik.png
       #href: https://traefik-external.ancalagon.black
