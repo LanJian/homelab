@@ -11,12 +11,6 @@
       #ping: https://stump.hl.ancalagon.black
       #description: Digital book, comic, and OPDS server.
 
-  - tandoor:
-      icon: tandoor.png
-      href: https://tandoor.lanjian.io
-      ping: https://tandoor.lanjian.io
-      description: Recipe database and meal planning.
-
   #- Synology NAS:
       #icon: synology-dsm
       #href: http://sleeper-service.home:5000
@@ -86,6 +80,12 @@
       #ping: http://ci.papercode.net:8080
       #description: Papercode CI server.
 
+  - tandoor:
+      icon: tandoor.png
+      href: https://tandoor.lanjian.io
+      ping: https://tandoor.lanjian.io
+      description: Recipe database and meal planning.
+
   - ntfy:
       icon: ntfy-light.png
       href: https://ntfy.lanjian.io
@@ -108,11 +108,19 @@
       href: https://argocd.lanjian.io
       ping: https://argocd.lanjian.io
       description: GitOps deploys for kubernetes cluster.
+
   - traefik-internal:
       icon: traefik.png
       href: http://traefik.lanjian.io
       ping: http://traefik.lanjian.io
-      description: internal reverse proxy routing dashboard.
+      description: Internal reverse proxy routing dashboard.
+
+  - tailscale:
+      icon: tailscale.png
+      href: https://login.tailscale.com/admin
+      ping: https://login.tailscale.com/admin
+      description: VPN admin dashboard.
+
   #- traefik-external:
       #icon: traefik.png
       #href: https://traefik-external.ancalagon.black
