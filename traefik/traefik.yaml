@@ -29,3 +29,5 @@ entryPoints:
     address: :443
     http:
       tls: {}
+  gitea-ssh:
+    address: :2222

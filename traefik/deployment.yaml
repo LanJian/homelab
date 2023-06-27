@@ -26,6 +26,8 @@ spec:
               containerPort: 443
             - name: dashboard
               containerPort: 8080
+            - name: gitea-ssh
+              containerPort: 2222
           volumeMounts:
             - mountPath: /etc/traefik/traefik.yaml
               subPath: traefik.yaml
