@@ -102,6 +102,12 @@
         #url: http://192.168.20.102
         #key: "{{HOMEPAGE_VAR_PIHOLE_TOKEN}}"
 
+  - gitea:
+      icon: gitea.png
+      href: https://gitea.lanjian.io
+      ping: https://gitea.lanjian.io
+      description: Source control server and package registry.
+
 - Cluster Tools:
   - Argo CD:
       icon: argocd.png
