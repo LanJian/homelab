@@ -11,12 +11,6 @@
       #ping: https://stump.hl.ancalagon.black
       #description: Digital book, comic, and OPDS server.
 
-  #- Synology NAS:
-      #icon: synology-dsm
-      #href: http://sleeper-service.home:5000
-      #ping: http://sleeper-service.home:5000
-      #description: Primary NAS.
-
   #- Prowlarr:
       #icon: prowlarr.png
       #href: https://prowlarr.hl.ancalagon.black
@@ -68,17 +62,10 @@
         #fields: ["wanted", "queued"]
 
 - Services:
-  #- 2FA:
-      #icon: mdi-two-factor-authentication
-      #href: https://2fa.hl.ancalagon.black
-      #ping: https://2fa.hl.ancalagon.black
-      #description: Internal 2FA generator.
-
-  #- Concourse Papercode:
-      #icon: concourse.png
-      #href: http://ci.papercode.net:8080
-      #ping: http://ci.papercode.net:8080
-      #description: Papercode CI server.
+  - Synology NAS:
+      icon: synology-dsm.png
+      href: http://speranza.local:5000
+      description: Primary NAS.
 
   - tandoor:
       icon: tandoor.png
@@ -107,6 +94,11 @@
       href: https://gitea.lanjian.io
       ping: https://gitea.lanjian.io
       description: Source control server and package registry.
+
+  - tailscale:
+    - icon: tailscale.png
+      href: https://login.tailscale.com/admin
+      description: VPN service
 
 - Cluster Tools:
   - Argo CD:
