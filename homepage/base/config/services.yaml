@@ -96,7 +96,7 @@
       description: Source control server and package registry.
 
   - tailscale:
-    - icon: tailscale.png
+      icon: tailscale.png
       href: https://login.tailscale.com/admin
       description: VPN service
 
