@@ -1,0 +1,14 @@
+---
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - ../../components/app
+namespace: "radarr"
+namePrefix: "radarr-"
+images:
+  - name: "linuxserver/radarr"
+    newTag: "amd64-4.4.4"
+configMapGenerator:
+  - name: app-config
+    envs:
+      - "app_config.env"
