@@ -1,0 +1,51 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app
+spec:
+  revisionHistoryLimit: 3
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+  template:
+    spec:
+      containers:
+        - name: app
+          image: "linuxserver/sabnzbd:4.0.3"
+          imagePullPolicy: Always
+          envFrom:
+            - configMapRef:
+                name: "app-config"
+          ports:
+            - name: http
+              containerPort: 8080
+              protocol: TCP
+          volumeMounts:
+            - name: data
+              mountPath: /config
+            - name: backup
+              mountPath: /backup
+            - name: black-library
+              mountPath: /black-library
+            - name: scripts
+              mountPath: /app/sabnzbd/scripts/clean.py
+              subPath: clean.py
+            - name: scripts
+              mountPath: /app/sabnzbd/scripts/replace_for.py
+              subPath: replace_for.py
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: data-pvc
+        - name: backup
+          persistentVolumeClaim:
+            claimName: backup-pvc
+        - name: black-library
+          hostPath:
+            path: /media/black-library
+            type: Directory
+        - name: scripts
+          configMap:
+            name: scripts
+            defaultMode: 0755
