@@ -1,0 +1,46 @@
+#!/usr/bin/env bash
+
+set -euxo pipefail
+
+# install k9s
+go install github.com/derailed/k9s@latest
+
+# install k3s and start cluster
+curl -sfL https://get.k3s.io | sh -s - \
+  --cluster-cidr=10.50.0.0/16 \
+  --write-kubeconfig-mode=644 \
+  --disable servicelb \
+  --disable traefik
+
+# k9s needs this config
+mkdir -p ~/.kube
+ln -sf /etc/rancher/k3s/k3s.yaml ~/.kube/config
+
+# deploy metallb
+# NOTE: the way the manifests are applied requires this to run multiple times
+kubectl apply -k metallb || true
+sleep 30 # wait for service to become available
+kubectl apply -k metallb
+
+# deploy traefik
+kubectl apply -f https://raw.githubusercontent.com/traefik/traefik/v2.10/docs/content/reference/dynamic-configuration/kubernetes-crd-definition-v1.yml
+kubectl apply -f https://raw.githubusercontent.com/traefik/traefik/v2.10/docs/content/reference/dynamic-configuration/kubernetes-crd-rbac.yml
+kubectl apply -k traefik
+
+# deploy cert-manager
+kubectl create namespace cert-manager
+kubectl create secret generic -n cert-manager cloudflare-api-token-secret \
+  --from-literal=api-token="$(gopass -o cloudflare/cert-manager-api-token)"
+kubectl apply -k cert-manager
+
+# deploy certs
+sleep 30 # wait for service to become available
+kubectl apply -k certs/installs/production
+
+# deploy sealed-secrets
+go install github.com/bitnami-labs/sealed-secrets/cmd/kubeseal@v0.22.0
+kubectl apply -k sealed-secrets
+
+# deploy argocd
+kubectl create namespace argocd
+kubectl apply -k argocd
