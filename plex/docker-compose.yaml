@@ -1,0 +1,16 @@
+---
+version: "2.1"
+services:
+  plex:
+    image: linuxserver/plex:1.32.5
+    container_name: plex
+    network_mode: host
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Los_Angeles
+      - VERSION=docker
+    volumes:
+      - ~/services/plex/config:/config
+      - /media/black-library:/black-library:ro
+    restart: unless-stopped
