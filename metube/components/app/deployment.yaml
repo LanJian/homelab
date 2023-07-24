@@ -1,0 +1,37 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app
+spec:
+  revisionHistoryLimit: 3
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+  template:
+    spec:
+      containers:
+        - name: app
+          image: "ghcr.io/alexta69/metube"
+          imagePullPolicy: Always
+          envFrom:
+            - configMapRef:
+                name: "app-config"
+          ports:
+            - name: http
+              containerPort: 8081
+              protocol: TCP
+          volumeMounts:
+            - name: video-downloads
+              mountPath: /downloads/video
+            - name: audio-downloads
+              mountPath: /downloads/audio
+      volumes:
+        - name: video-downloads
+          hostPath:
+            path: /media/black-library/downloads/video
+            type: Directory
+        - name: audio-downloads
+          hostPath:
+            path: /media/black-library/downloads/audio
+            type: Directory
