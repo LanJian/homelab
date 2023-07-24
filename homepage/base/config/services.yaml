@@ -5,18 +5,6 @@
       ping: http://192.168.20.100:32400
       description: Media server.
 
-  #- Stump:
-      #icon: /icons/stump-logo--irregular.png
-      #href: https://stump.hl.ancalagon.black
-      #ping: https://stump.hl.ancalagon.black
-      #description: Digital book, comic, and OPDS server.
-
-  #- Prowlarr:
-      #icon: prowlarr.png
-      #href: https://prowlarr.hl.ancalagon.black
-      #ping: https://prowlarr.hl.ancalagon.black
-      #description: Indexer management.
-
   - Jellyseerr:
       icon: jellyseerr.png
       href: https://jellyseerr.lanjian.io
@@ -30,8 +18,8 @@
 
   - Radarr:
       icon: radarr-light.png
-      href: http://192.168.20.100:9899/
-      ping: http://192.168.20.100:9899/
+      href: http://radarr.lanjian.io
+      ping: http://radarr.lanjian.io
       description: Movie requests.
       #widget:
         #type: radarr
@@ -41,14 +29,30 @@
 
   - Sonarr:
       icon: sonarr.png
-      href: http://192.168.20.100:9898
-      ping: http://192.168.20.100:9898
+      href: http://sonarr.lanjian.io
+      ping: http://sonarr.lanjian.io
       description: TV show requests.
       #widget:
         #type: sonarr
         #url: https://sonarr.hl.ancalagon.black
         #key: "{{HOMEPAGE_VAR_SONARR_KEY}}"
         #fields: ["wanted", "queued"]
+
+  - Prowlarr:
+      icon: prowlarr.png
+      href: https://prowlarr.lanjian.io
+      ping: https://prowlarr.lanjian.io
+      description: Indexer management.
+
+  - SABnzbd:
+      icon: sabnzbd-alt.png
+      href: https://sabnzbd.lanjian.io
+      ping: https://sabnzbd.lanjian.io
+      description: Usenet client.
+      #widget:
+        #type: sabnzbd
+        #url: https://sabnzbd.hl.ancalagon.black
+        #key: "{{HOMEPAGE_VAR_SABNZBD_KEY}}"
 
   #- Readarr:
       #icon: readarr.png
@@ -62,11 +66,6 @@
         #fields: ["wanted", "queued"]
 
 - Services:
-  - Synology NAS:
-      icon: synology-dsm.png
-      href: http://speranza.local:5000
-      description: Primary NAS.
-
   - tandoor:
       icon: tandoor.png
       href: https://tandoor.lanjian.io
@@ -95,10 +94,15 @@
       ping: https://gitea.lanjian.io
       description: Source control server and package registry.
 
+  - Synology NAS:
+      icon: synology-dsm.png
+      href: http://speranza.local:5000
+      description: Primary NAS.
+
   - tailscale:
       icon: tailscale.png
       href: https://login.tailscale.com/admin
-      description: VPN service
+      description: VPN service.
 
 - Cluster Tools:
   - Argo CD:
@@ -144,13 +148,3 @@
         #url: http://chiark.home:9077
         #username: "{{HOMEPAGE_VAR_QBITTORRENT_USER}}"
         #password: "{{HOMEPAGE_VAR_QBITTORRENT_PASS}}"
-
-  #- SABnzbd:
-      #icon: sabnzbd-alt.png
-      #href: https://sabnzbd.hl.ancalagon.black
-      #ping: https://sabnzbd.hl.ancalagon.black
-      #description: Usenet client.
-      #widget:
-        #type: sabnzbd
-        #url: https://sabnzbd.hl.ancalagon.black
-        #key: "{{HOMEPAGE_VAR_SABNZBD_KEY}}"
