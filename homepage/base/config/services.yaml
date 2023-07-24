@@ -3,7 +3,13 @@
       icon: plex.png
       href: http://192.168.20.100:32400
       ping: http://192.168.20.100:32400
-      description: Media server.
+      description: Plex media server.
+
+  - Jellyfin:
+      icon: jellyfin.png
+      href: http://192.168.20.100:8096
+      ping: http://192.168.20.100:8096
+      description: Jellyfin media server.
 
   - Jellyseerr:
       icon: jellyseerr.png
