@@ -92,12 +92,12 @@
 
   - pi-hole:
       icon: pi-hole.png
-      href: http://192.168.20.102:8888/admin
-      ping: http://192.168.20.102:8888/admin
+      href: http://192.168.20.100:8888/admin
+      ping: http://192.168.20.100:8888/admin
       description: DNS server and adblocker.
       #widget:
         #type: pihole
-        #url: http://192.168.20.102
+        #url: http://192.168.20.100
         #key: "{{HOMEPAGE_VAR_PIHOLE_TOKEN}}"
 
   - gitea:
