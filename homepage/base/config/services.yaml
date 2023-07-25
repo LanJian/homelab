@@ -59,6 +59,12 @@
         #type: sabnzbd
         #url: https://sabnzbd.hl.ancalagon.black
         #key: "{{HOMEPAGE_VAR_SABNZBD_KEY}}"
+        #
+  - MeTube:
+      icon: metube.png
+      href: https://metube.lanjian.io
+      ping: https://metube.lanjian.io
+      description: YouTube (and others) downloader.
 
   #- Readarr:
       #icon: readarr.png
