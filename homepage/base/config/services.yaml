@@ -117,6 +117,12 @@
       description: VPN service.
 
 - Cluster Tools:
+  - Router:
+      icon: router.png
+      href: http://192.168.20.1
+      ping: http://192.168.20.1
+      description: Router admin console.
+
   - Argo CD:
       icon: argocd.png
       href: https://argocd.lanjian.io
