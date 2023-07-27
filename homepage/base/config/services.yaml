@@ -50,33 +50,6 @@
       ping: https://prowlarr.lanjian.io
       description: Indexer management.
 
-  - SABnzbd:
-      icon: sabnzbd-alt.png
-      href: https://sabnzbd.lanjian.io
-      ping: https://sabnzbd.lanjian.io
-      description: Usenet client.
-      #widget:
-        #type: sabnzbd
-        #url: https://sabnzbd.hl.ancalagon.black
-        #key: "{{HOMEPAGE_VAR_SABNZBD_KEY}}"
-        #
-  - MeTube:
-      icon: metube.png
-      href: https://metube.lanjian.io
-      ping: https://metube.lanjian.io
-      description: YouTube (and others) downloader.
-
-  #- Readarr:
-      #icon: readarr.png
-      #href: https://readarr.hl.ancalagon.black
-      #ping: https://readarr.hl.ancalagon.black
-      #description: Book requests.
-      #widget:
-        #type: readarr
-        #url: https://readarr.hl.ancalagon.black
-        #key: "{{HOMEPAGE_VAR_READARR_KEY}}"
-        #fields: ["wanted", "queued"]
-
 - Services:
   - tandoor:
       icon: tandoor.png
@@ -111,10 +84,28 @@
       href: http://speranza.local:5000
       description: Primary NAS.
 
-  - tailscale:
-      icon: tailscale.png
-      href: https://login.tailscale.com/admin
-      description: VPN service.
+- Download Clients:
+  - SABnzbd:
+      icon: sabnzbd-alt.png
+      href: https://sabnzbd.lanjian.io
+      ping: https://sabnzbd.lanjian.io
+      description: Usenet client.
+      #widget:
+        #type: sabnzbd
+        #url: https://sabnzbd.hl.ancalagon.black
+        #key: "{{HOMEPAGE_VAR_SABNZBD_KEY}}"
+
+  - MeTube:
+      icon: metube.png
+      href: https://metube.lanjian.io
+      ping: https://metube.lanjian.io
+      description: YouTube (and others) downloader.
+
+  - JDownloader:
+      icon: jdownloader.png
+      href: https://jdownloader.lanjian.io
+      ping: https://jdownloader.lanjian.io
+      description: Link extractor and download manager.
 
 - Cluster Tools:
   - Router:
@@ -135,34 +126,7 @@
       ping: http://traefik.lanjian.io
       description: Internal reverse proxy routing dashboard.
 
-  #- traefik-external:
-      #icon: traefik.png
-      #href: https://traefik-external.ancalagon.black
-      #ping: https://traefik-external.ancalagon.black
-      #description: external reverse proxy routing dashboard.
-  #- scrutiny:
-      #icon: scrutiny-light.png
-      #href: http://chiark.home:8080
-      #ping: http://chiark.home:8080
-      #description: SMART disk monitoring dashboard.
-      #widget:
-        #type: scrutiny
-        #url: http://chiark.home:8080
-
-#- Download Clients:
-  #- MeTube:
-      #icon: metube.png
-      #href: https://metube.hl.ancalagon.black
-      #ping: https://metube.hl.ancalagon.black
-      #description: YouTube (and others) downloader.
-
-  #- qbittorrent:
-      #icon: qbittorrent.png
-      #href: http://chiark.home:9077
-      #ping: http://chiark.home:9077
-      #description: Torrent client.
-      #widget:
-        #type: qbittorrent
-        #url: http://chiark.home:9077
-        #username: "{{HOMEPAGE_VAR_QBITTORRENT_USER}}"
-        #password: "{{HOMEPAGE_VAR_QBITTORRENT_PASS}}"
+  - tailscale:
+      icon: tailscale.png
+      href: https://login.tailscale.com/admin
+      description: VPN service.
