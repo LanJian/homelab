@@ -20,7 +20,7 @@ spec:
                 - configMapRef:
                     name: secret-sentinel
                 - secretRef:
-                    name: sealed-secret
+                    name: prnotify-secrets
               volumeMounts:
                 - name: settings
                   mountPath: /etc/prnotify

@@ -1,7 +1,7 @@
 - Media:
   - Plex:
       icon: plex.png
-      href: http://192.168.20.100:32400
+      href: http://192.168.20.100:32400/web
       ping: http://192.168.20.100:32400
       description: Plex media server.
 
