@@ -38,6 +38,8 @@ spec:
               mountPath: /app/public/icons
             - name: homepage-images
               mountPath: /app/public/images
+            - name: homepage-config
+              mountPath: /app/config
             - mountPath: /app/config/custom.js
               name: homepage-config
               subPath: custom.js
