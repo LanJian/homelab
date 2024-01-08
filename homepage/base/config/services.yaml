@@ -2,19 +2,19 @@
   - Plex:
       icon: plex.png
       href: http://192.168.20.100:32400/web
-      ping: http://192.168.20.100:32400
+      siteMonitor: http://192.168.20.100:32400
       description: Plex media server.
 
   - Jellyfin:
       icon: jellyfin.png
       href: http://192.168.20.100:8096
-      ping: http://192.168.20.100:8096
+      siteMonitor: http://192.168.20.100:8096
       description: Jellyfin media server.
 
   - Jellyseerr:
       icon: jellyseerr.png
       href: https://jellyseerr.lanjian.io
-      ping: https://jellyseerr.lanjian.io
+      siteMonitor: https://jellyseerr.lanjian.io
       description: Media requests.
       #widget:
         #type: jellyseerr
@@ -25,7 +25,7 @@
   - Radarr:
       icon: radarr-light.png
       href: http://radarr.lanjian.io
-      ping: http://radarr.lanjian.io
+      siteMonitor: http://radarr.lanjian.io
       description: Movie requests.
       #widget:
         #type: radarr
@@ -36,7 +36,7 @@
   - Sonarr:
       icon: sonarr.png
       href: http://sonarr.lanjian.io
-      ping: http://sonarr.lanjian.io
+      siteMonitor: http://sonarr.lanjian.io
       description: TV show requests.
       #widget:
         #type: sonarr
@@ -47,26 +47,26 @@
   - Prowlarr:
       icon: prowlarr.png
       href: https://prowlarr.lanjian.io
-      ping: https://prowlarr.lanjian.io
+      siteMonitor: https://prowlarr.lanjian.io
       description: Indexer management.
 
 - Services:
   - tandoor:
       icon: tandoor.png
       href: https://tandoor.lanjian.io
-      ping: https://tandoor.lanjian.io
+      siteMonitor: https://tandoor.lanjian.io
       description: Recipe database and meal planning.
 
   - ntfy:
       icon: ntfy-light.png
       href: https://ntfy.lanjian.io
-      ping: https://ntfy.lanjian.io
+      siteMonitor: https://ntfy.lanjian.io
       description: Internal Pub/Sub notifications.
 
   - pi-hole:
       icon: pi-hole.png
       href: http://192.168.20.100/admin
-      ping: http://192.168.20.100/admin
+      siteMonitor: http://192.168.20.100/admin
       description: DNS server and adblocker.
       #widget:
         #type: pihole
@@ -76,7 +76,7 @@
   - gitea:
       icon: gitea.png
       href: https://gitea.lanjian.io
-      ping: https://gitea.lanjian.io
+      siteMonitor: https://gitea.lanjian.io
       description: Source control server and package registry.
 
   - Synology NAS:
@@ -88,7 +88,7 @@
   - SABnzbd:
       icon: sabnzbd-alt.png
       href: https://sabnzbd.lanjian.io
-      ping: https://sabnzbd.lanjian.io
+      siteMonitor: https://sabnzbd.lanjian.io
       description: Usenet client.
       #widget:
         #type: sabnzbd
@@ -98,32 +98,32 @@
   - MeTube:
       icon: metube.png
       href: https://metube.lanjian.io
-      ping: https://metube.lanjian.io
+      siteMonitor: https://metube.lanjian.io
       description: YouTube (and others) downloader.
 
   - JDownloader:
       icon: jdownloader.png
       href: https://jdownloader.lanjian.io
-      ping: https://jdownloader.lanjian.io
+      siteMonitor: https://jdownloader.lanjian.io
       description: Link extractor and download manager.
 
 - Cluster Tools:
   - Router:
       icon: router.png
       href: http://192.168.20.1
-      ping: http://192.168.20.1
+      siteMonitor: http://192.168.20.1
       description: Router admin console.
 
   - Argo CD:
       icon: argocd.png
       href: https://argocd.lanjian.io
-      ping: https://argocd.lanjian.io
+      siteMonitor: https://argocd.lanjian.io
       description: GitOps deploys for kubernetes cluster.
 
   - traefik-internal:
       icon: traefik.png
       href: http://traefik.lanjian.io
-      ping: http://traefik.lanjian.io
+      siteMonitor: http://traefik.lanjian.io
       description: Internal reverse proxy routing dashboard.
 
   - tailscale:
