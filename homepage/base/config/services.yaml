@@ -24,8 +24,8 @@
 
   - Radarr:
       icon: radarr-light.png
-      href: http://radarr.lanjian.io
-      siteMonitor: http://radarr.lanjian.io
+      href: https://radarr.lanjian.io
+      siteMonitor: https://radarr.lanjian.io
       description: Movie requests.
       #widget:
         #type: radarr
@@ -35,8 +35,8 @@
 
   - Sonarr:
       icon: sonarr.png
-      href: http://sonarr.lanjian.io
-      siteMonitor: http://sonarr.lanjian.io
+      href: https://sonarr.lanjian.io
+      siteMonitor: https://sonarr.lanjian.io
       description: TV show requests.
       #widget:
         #type: sonarr
