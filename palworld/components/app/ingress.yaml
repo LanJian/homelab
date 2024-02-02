@@ -1,0 +1,35 @@
+---
+apiVersion: traefik.io/v1alpha1
+kind: IngressRouteUDP
+metadata:
+  name: server-ingress
+  annotations:
+    kubernetes.io/ingress.class: traefik-internal
+  labels:
+    traffic-type: internal
+spec:
+  entryPoints:
+    - palworld-server
+  routes:
+  - services:
+    - name: palworld-server
+      port: 8211
+      nativeLB: true
+
+---
+apiVersion: traefik.io/v1alpha1
+kind: IngressRouteUDP
+metadata:
+  name: query-ingress
+  annotations:
+    kubernetes.io/ingress.class: traefik-internal
+  labels:
+    traffic-type: internal
+spec:
+  entryPoints:
+    - palworld-query
+  routes:
+  - services:
+    - name: palworld-query
+      port: 27015
+      nativeLB: true

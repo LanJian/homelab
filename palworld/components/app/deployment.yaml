@@ -1,0 +1,51 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: app
+  name: app
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: app
+  template:
+    metadata:
+      labels:
+        app: app
+    spec:
+      containers:
+        - name: app
+          image: "thijsvanloef/palworld-server-docker"
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8211
+              name: server
+              protocol: UDP
+            - containerPort: 27015
+              name: query
+              protocol: UDP
+          env:
+            - name: ADMIN_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: palworld-secrets
+                  key: admin-password
+            - name: SERVER_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: palworld-secrets
+                  key: server-password
+          envFrom:
+            - configMapRef:
+                name: app-config
+          volumeMounts:
+            - mountPath: /palworld
+              name: data
+      volumes:
+      - name: data
+        persistentVolumeClaim:
+          claimName: data-pvc

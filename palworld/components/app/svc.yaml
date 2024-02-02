@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: svc
+  annotations:
+    metallb.universe.tf/loadBalancerIPs: 192.168.20.7
+spec:
+  type: LoadBalancer
+  ports:
+    - name: server
+      port: 8211
+      protocol: UDP
+      targetPort: server
+    - name: query
+      port: 27015
+      protocol: UDP
+      targetPort: query

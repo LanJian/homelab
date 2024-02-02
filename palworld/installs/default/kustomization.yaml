@@ -1,0 +1,15 @@
+---
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - "../../components/app"
+  - "secrets.yaml"
+namespace: "palworld"
+namePrefix: "palworld-"
+images:
+  - name: "thijsvanloef/palworld-server-docker"
+    newTag: "latest"
+configMapGenerator:
+  - name: app-config
+    envs:
+      - "app-config.env"
