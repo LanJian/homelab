@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: traefik-dashboard-service
   annotations:
-    metallb.universe.tf/loadBalancerIPs: 192.168.20.5
+    metallb.universe.tf/loadBalancerIPs: 192.168.50.5
 
 spec:
   type: LoadBalancer
@@ -18,7 +18,7 @@ kind: Service
 metadata:
   name: traefik-http-service
   annotations:
-    metallb.universe.tf/loadBalancerIPs: 192.168.20.6
+    metallb.universe.tf/loadBalancerIPs: 192.168.50.6
 
 spec:
   type: LoadBalancer

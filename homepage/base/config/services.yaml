@@ -1,14 +1,14 @@
 - Media:
   - Plex:
       icon: plex.png
-      href: http://192.168.20.100:32400/web
-      siteMonitor: http://192.168.20.100:32400
+      href: http://192.168.50.50:32400/web
+      siteMonitor: http://192.168.50.50:32400
       description: Plex media server.
 
   - Jellyfin:
       icon: jellyfin.png
-      href: http://192.168.20.100:8096
-      siteMonitor: http://192.168.20.100:8096
+      href: http://192.168.50.50:8096
+      siteMonitor: http://192.168.50.50:8096
       description: Jellyfin media server.
 
   - Jellyseerr:
@@ -65,12 +65,12 @@
 
   - pi-hole:
       icon: pi-hole.png
-      href: http://192.168.20.100/admin
-      siteMonitor: http://192.168.20.100/admin
+      href: http://192.168.50.50/admin
+      siteMonitor: http://192.168.50.50/admin
       description: DNS server and adblocker.
       #widget:
         #type: pihole
-        #url: http://192.168.20.100
+        #url: http://192.168.50.50
         #key: "{{HOMEPAGE_VAR_PIHOLE_TOKEN}}"
 
   - gitea:
@@ -108,11 +108,17 @@
       description: Link extractor and download manager.
 
 - Cluster Tools:
-  - Router:
-      icon: router.png
-      href: http://192.168.20.1
-      siteMonitor: http://192.168.20.1
-      description: Router admin console.
+  - pfSense:
+      icon: pfsense.png
+      href: http://192.168.10.1
+      siteMonitor: http://192.168.10.1
+      description: pfSense admin console.
+
+  - Omada Controller:
+      icon: omada.png
+      href: http://192.168.10.10
+      siteMonitor: http://192.168.10.10
+      description: Omada controller admin console.
 
   - Argo CD:
       icon: argocd.png

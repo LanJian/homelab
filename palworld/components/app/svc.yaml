@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: svc
   annotations:
-    metallb.universe.tf/loadBalancerIPs: 192.168.20.7
+    metallb.universe.tf/loadBalancerIPs: 192.168.50.7
 spec:
   type: LoadBalancer
   ports:
