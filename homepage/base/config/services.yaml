@@ -110,14 +110,14 @@
 - Cluster Tools:
   - pfSense:
       icon: pfsense.png
-      href: http://192.168.10.1
-      siteMonitor: http://192.168.10.1
+      href: https://192.168.10.1
+      siteMonitor: https://192.168.10.1
       description: pfSense admin console.
 
   - Omada Controller:
       icon: omada.png
-      href: http://192.168.10.10
-      siteMonitor: http://192.168.10.10
+      href: https://192.168.10.10
+      siteMonitor: https://192.168.10.10
       description: Omada controller admin console.
 
   - Argo CD:
