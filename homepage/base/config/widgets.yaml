@@ -20,7 +20,9 @@
     focus: true
     target: _blank
 - openmeteo:
-    label: Current
+    label: SF
+    latitude: 37.783642955200456
+    longitude: -122.3989529357531
     units: metric
     cache: 5
     format:
