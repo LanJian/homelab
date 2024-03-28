@@ -8,3 +8,5 @@
   #Media:
     #style: row
     #columns: 5
+
+headerStyle: boxedWidgets

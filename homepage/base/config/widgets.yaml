@@ -19,3 +19,9 @@
     provider: google
     focus: true
     target: _blank
+- openmeteo:
+    label: Current
+    units: metric
+    cache: 5
+    format:
+      maximumFractionDigits: 1
