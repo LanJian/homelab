@@ -20,9 +20,17 @@
     focus: true
     target: _blank
 - openmeteo:
-    label: SF
+    label: San Francisco
     latitude: 37.783642955200456
     longitude: -122.3989529357531
+    units: metric
+    cache: 5
+    format:
+      maximumFractionDigits: 1
+- openmeteo:
+    label: Richmond Hill
+    latitude: 43.91494214470587
+    longitude: -79.43362098413725
     units: metric
     cache: 5
     format:
