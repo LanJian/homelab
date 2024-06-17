@@ -4,6 +4,7 @@ kind: CronJob
 metadata:
   name: restart-deployment
 spec:
+  suspend: false
   concurrencyPolicy:  Forbid
   schedule: "0 5 * * 2"
   jobTemplate:
