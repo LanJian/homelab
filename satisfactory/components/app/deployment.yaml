@@ -1,0 +1,43 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: app
+  name: app
+spec:
+  replicas: 0
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: app
+  template:
+    metadata:
+      labels:
+        app: app
+    spec:
+      containers:
+        - name: app
+          image: "wolveix/satisfactory-server"
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 7777
+              name: game
+              protocol: UDP
+            - containerPort: 15777
+              name: query
+              protocol: UDP
+            - containerPort: 15000
+              name: beacon
+              protocol: UDP
+          envFrom:
+            - configMapRef:
+                name: app-config
+          volumeMounts:
+            - mountPath: /config
+              name: data
+      volumes:
+      - name: data
+        persistentVolumeClaim:
+          claimName: data-pvc
