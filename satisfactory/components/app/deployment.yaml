@@ -6,7 +6,7 @@ metadata:
     app: app
   name: app
 spec:
-  replicas: 0
+  replicas: 1
   strategy:
     type: Recreate
   selector:
