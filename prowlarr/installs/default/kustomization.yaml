@@ -7,7 +7,7 @@ namespace: "prowlarr"
 namePrefix: "prowlarr-"
 images:
   - name: "linuxserver/prowlarr"
-    newTag: "1.7.4"
+    newTag: "1.23.1"
 configMapGenerator:
   - name: app-config
     envs:
