@@ -91,11 +91,11 @@
       siteMonitor: https://metube.lanjian.io
       description: YouTube (and others) downloader.
 
-  - JDownloader:
-      icon: jdownloader.png
-      href: https://jdownloader.lanjian.io
-      siteMonitor: https://jdownloader.lanjian.io
-      description: Link extractor and download manager.
+  #- JDownloader:
+      #icon: jdownloader.png
+      #href: https://jdownloader.lanjian.io
+      #siteMonitor: https://jdownloader.lanjian.io
+      #description: Link extractor and download manager.
 
 - Cluster Tools:
   - pfSense:
