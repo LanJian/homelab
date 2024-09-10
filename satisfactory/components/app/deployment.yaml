@@ -20,7 +20,7 @@ spec:
       containers:
         - name: app
           image: "wolveix/satisfactory-server"
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           ports:
             - containerPort: 7777
               name: game
