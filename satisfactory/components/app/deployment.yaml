@@ -25,12 +25,9 @@ spec:
             - containerPort: 7777
               name: game
               protocol: UDP
-            - containerPort: 15777
-              name: query
-              protocol: UDP
-            - containerPort: 15000
-              name: beacon
-              protocol: UDP
+            - containerPort: 7777
+              name: gametcp
+              protocol: TCP
           envFrom:
             - configMapRef:
                 name: app-config
