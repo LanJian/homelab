@@ -21,6 +21,16 @@ spec:
         - name: app
           image: "wolveix/satisfactory-server"
           imagePullPolicy: Always
+          livenessProbe:
+            exec:
+              command:
+                - "bash"
+                - "/healthcheck.sh"
+            initialDelaySeconds: 120
+            periodSeconds: 30
+            timeoutSeconds: 10
+            failureThreshold: 3
+            successThreshold: 1
           ports:
             - containerPort: 7777
               name: game
