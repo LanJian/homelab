@@ -29,9 +29,9 @@ spec:
       volumes:
         - name: video-downloads
           hostPath:
-            path: /media/black-library/downloads/video
+            path: /media/black-library/downloads/metube/video
             type: Directory
         - name: audio-downloads
           hostPath:
-            path: /media/black-library/downloads/audio
+            path: /media/black-library/downloads/metube/audio
             type: Directory
