@@ -11,25 +11,55 @@ spec:
   template:
     spec:
       containers:
+        - name: gluetun
+          image: ghcr.io/qdm12/gluetun:v3.39.1
+          imagePullPolicy: Always
+          securityContext:
+            capabilities:
+              add: ["NET_ADMIN"]
+          ports:
+            - name: http
+              containerPort: 5800
+              protocol: TCP
+          env:
+            - name: TZ
+              value: "America/Los_Angeles"
+            - name: VPN_SERVICE_PROVIDER
+              value: "nordvpn"
+            - name: VPN_TYPE
+              value: "wireguard"
+            - name: DNS_KEEP_NAMESERVER
+              value: "on"
+            - name: FIREWALL_INPUT_PORTS
+              value: "5800"
+            - name: WIREGUARD_PRIVATE_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: jdownloader-secrets
+                  key: gluetun-wireguard-private-key
+          volumeMounts:
+            - name: gluetun-data
+              mountPath: /gluetun
+
         - name: app
           image: "jlesage/jdownloader-2"
           imagePullPolicy: Always
           envFrom:
             - configMapRef:
                 name: "app-config"
-          ports:
-            - name: http
-              containerPort: 5800
-              protocol: TCP
           volumeMounts:
             - name: data
               mountPath: /config
             - name: black-library
               mountPath: /black-library
+
       volumes:
         - name: data
           persistentVolumeClaim:
             claimName: data-pvc
+        - name: gluetun-data
+          persistentVolumeClaim:
+            claimName: gluetun-data-pvc
         - name: black-library
           hostPath:
             path: /media/black-library
