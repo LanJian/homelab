@@ -23,7 +23,7 @@
         #fields: ["approved", "available"]
 
   - Radarr:
-      icon: radarr-light.png
+      icon: radarr.png
       href: https://radarr.lanjian.io
       siteMonitor: https://radarr.lanjian.io
       description: Movie requests.
@@ -52,13 +52,13 @@
 
 - Services:
   - tandoor:
-      icon: tandoor.png
+      icon: tandoor-recipes.png
       href: https://tandoor.lanjian.io
       siteMonitor: https://tandoor.lanjian.io
       description: Recipe database and meal planning.
 
   - ntfy:
-      icon: ntfy-light.png
+      icon: ntfy.png
       href: https://ntfy.lanjian.io
       siteMonitor: https://ntfy.lanjian.io
       description: Internal Pub/Sub notifications.
@@ -76,7 +76,7 @@
 
 - Download Clients:
   - SABnzbd:
-      icon: sabnzbd-alt.png
+      icon: sabnzbd.png
       href: https://sabnzbd.lanjian.io
       siteMonitor: https://sabnzbd.lanjian.io
       description: Usenet client.
@@ -111,7 +111,7 @@
       description: Omada controller admin console.
 
   - Argo CD:
-      icon: argocd.png
+      icon: argo-cd.png
       href: https://argocd.lanjian.io
       siteMonitor: https://argocd.lanjian.io
       description: GitOps deploys for kubernetes cluster.
