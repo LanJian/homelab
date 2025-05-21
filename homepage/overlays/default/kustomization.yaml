@@ -5,9 +5,8 @@ resources:
   - ../../base
 
 namespace: "homepage"
-namePrefix: "homepage-"
 
 configMapGenerator:
-  - name: app-config
+  - name: homepage-app-config
     envs:
       - "app_config.env"
