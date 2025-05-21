@@ -3,3 +3,8 @@ kind: Kustomization
 
 resources:
   - ../../base
+
+configMapGenerator:
+  - name: app-config
+    envs:
+      - "app_config.env"
