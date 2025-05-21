@@ -4,6 +4,9 @@ kind: Kustomization
 resources:
   - ../../base
 
+namespace: "homepage"
+namePrefix: "homepage-"
+
 configMapGenerator:
   - name: app-config
     envs:
