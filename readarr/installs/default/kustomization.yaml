@@ -7,7 +7,7 @@ namespace: "readarr"
 namePrefix: "readarr-"
 images:
   - name: "linuxserver/readarr"
-    newTag: "0.3.26-develop"
+    newTag: "0.4.18-develop"
 configMapGenerator:
   - name: app-config
     envs:
