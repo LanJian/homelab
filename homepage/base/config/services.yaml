@@ -11,38 +11,35 @@
       siteMonitor: http://192.168.50.50:8096
       description: Jellyfin media server.
 
+  - Audiobookshelf:
+      icon: audiobookshelf.png
+      href: https://audiobookshelf.lanjian.io
+      siteMonitor: https://audiobookshelf.lanjian.io
+      description: Audiobook and podcast media server.
+
   - Jellyseerr:
       icon: jellyseerr.png
       href: https://jellyseerr.lanjian.io
       siteMonitor: https://jellyseerr.lanjian.io
       description: Media requests.
-      #widget:
-        #type: jellyseerr
-        #url: https://jellyseerr.hl.ancalagon.black
-        #key: "{{HOMEPAGE_VAR_JELLYSEERR_KEY}}"
-        #fields: ["approved", "available"]
 
   - Radarr:
       icon: radarr.png
       href: https://radarr.lanjian.io
       siteMonitor: https://radarr.lanjian.io
       description: Movie requests.
-      #widget:
-        #type: radarr
-        #url: https://radarr.hl.ancalagon.black
-        #key: "{{HOMEPAGE_VAR_RADARR_KEY}}"
-        #fields: ["wanted", "missing", "queued"]
 
   - Sonarr:
       icon: sonarr.png
       href: https://sonarr.lanjian.io
       siteMonitor: https://sonarr.lanjian.io
       description: TV show requests.
-      #widget:
-        #type: sonarr
-        #url: https://sonarr.hl.ancalagon.black
-        #key: "{{HOMEPAGE_VAR_SONARR_KEY}}"
-        #fields: ["wanted", "queued"]
+
+  - Readarr:
+      icon: readarr.png
+      href: https://readarr.lanjian.io
+      siteMonitor: https://readarr.lanjian.io
+      description: Book requests.
 
   - Prowlarr:
       icon: prowlarr.png
@@ -80,22 +77,12 @@
       href: https://sabnzbd.lanjian.io
       siteMonitor: https://sabnzbd.lanjian.io
       description: Usenet client.
-      #widget:
-        #type: sabnzbd
-        #url: https://sabnzbd.hl.ancalagon.black
-        #key: "{{HOMEPAGE_VAR_SABNZBD_KEY}}"
 
   - MeTube:
       icon: metube.png
       href: https://metube.lanjian.io
       siteMonitor: https://metube.lanjian.io
       description: YouTube (and others) downloader.
-
-  #- JDownloader:
-      #icon: jdownloader.png
-      #href: https://jdownloader.lanjian.io
-      #siteMonitor: https://jdownloader.lanjian.io
-      #description: Link extractor and download manager.
 
 - Cluster Tools:
   - pfSense:
