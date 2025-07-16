@@ -42,6 +42,12 @@
       siteMonitor: https://readarr.lanjian.io
       description: Book requests.
 
+  - Audiobookrequest:
+      icon: https://raw.githubusercontent.com/markbeep/AudioBookRequest/refs/heads/main/static/android-chrome-512x512.png
+      href: https://audiobookrequest.lanjian.io
+      siteMonitor: https://audiobookrequest.lanjian.io
+      description: Audiobook requests.
+
   - Prowlarr:
       icon: prowlarr.png
       href: https://prowlarr.lanjian.io
