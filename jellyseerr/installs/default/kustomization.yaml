@@ -7,7 +7,7 @@ namespace: "jellyseerr"
 namePrefix: "jellyseerr-"
 images:
   - name: "fallenbagel/jellyseerr"
-    newTag: "1.8.1"
+    newTag: "2.7.3"
 configMapGenerator:
   - name: app-config
     envs:
