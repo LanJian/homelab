@@ -7,7 +7,7 @@ namespace: "audiobookrequest"
 namePrefix: "audiobookrequest-"
 images:
   - name: "markbeep/audiobookrequest"
-    newTag: "1.4.9"
+    newTag: "1.7.0"
 configMapGenerator:
   - name: app-config
     envs:
