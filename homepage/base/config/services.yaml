@@ -94,8 +94,8 @@
 - Cluster Tools:
   - pfSense:
       icon: pfsense.png
-      href: https://192.168.10.1
-      siteMonitor: https://192.168.10.1
+      href: https://192.168.50.1
+      siteMonitor: https://192.168.50.1
       description: pfSense admin console.
 
   - Omada Controller:
