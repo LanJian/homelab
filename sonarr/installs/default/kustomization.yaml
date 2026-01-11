@@ -7,7 +7,7 @@ namespace: "sonarr"
 namePrefix: "sonarr-"
 images:
   - name: "linuxserver/sonarr"
-    newTag: "3.0.10"
+    newTag: "4.0.16"
 configMapGenerator:
   - name: app-config
     envs:
