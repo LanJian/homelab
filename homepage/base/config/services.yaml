@@ -36,6 +36,12 @@
       siteMonitor: https://sonarr.lanjian.io
       description: TV show requests.
 
+  - Bazarr:
+      icon: bazarr.png
+      href: https://bazarr.lanjian.io
+      siteMonitor: https://bazarr.lanjian.io
+      description: Subtitle requests.
+
   - Readarr:
       icon: readarr.png
       href: https://readarr.lanjian.io
