@@ -1,2 +1,8 @@
+title: My Awesome Homepage
 headerStyle: boxedWidgets
 maxGroupColumns: 8
+
+layout:
+  Media:
+    style: row
+    columns: 4
