@@ -7,7 +7,7 @@ namespace: "seerr"
 namePrefix: "seerr-"
 images:
   - name: "ghcr.io/seerr-team/seerr"
-    newTag: "3.1.0"
+    newTag: "v3.1.0"
 configMapGenerator:
   - name: app-config
     envs:
