@@ -12,10 +12,10 @@ spec:
     - websecure
   routes:
     - kind: Rule
-      match: Host(`jellyseerr.lanjian.io`)
+      match: Host(`seerr.lanjian.io`)
       priority: 10
       services:
-        - name: jellyseerr-svc
+        - name: seerr-svc
           port: 80
   tls:
     certResolver: default
