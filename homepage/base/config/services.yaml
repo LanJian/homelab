@@ -18,10 +18,10 @@
       description: Audiobook and podcast media server.
 
 - Requesters:
-  - Jellyseerr:
-      icon: jellyseerr.png
-      href: https://jellyseerr.lanjian.io
-      siteMonitor: https://jellyseerr.lanjian.io
+  - Seerr:
+      icon: seerr.png
+      href: https://seerr.lanjian.io
+      siteMonitor: https://seerr.lanjian.io
       description: Media requests.
 
   - Radarr:
