@@ -31,3 +31,5 @@ entryPoints:
       tls: {}
   gitea-ssh:
     address: :2222
+  tdarr-server:
+    address: :8266

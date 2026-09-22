@@ -32,5 +32,8 @@ spec:
     - targetPort: gitea-ssh
       name: gitea-ssh
       port: 2222
+    - targetPort: tdarr-server
+      name: tdarr-server
+      port: 8266
   selector:
     app: traefik

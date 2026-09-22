@@ -1,0 +1,50 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app
+spec:
+  revisionHistoryLimit: 3
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+  template:
+    spec:
+      containers:
+        - name: app
+          image: "ghcr.io/haveagitgat/tdarr:latest"
+          imagePullPolicy: Always
+          envFrom:
+            - configMapRef:
+                name: "app-config"
+          ports:
+            - name: http
+              containerPort: 8265
+              protocol: TCP
+            - name: server
+              containerPort: 8266
+              protocol: TCP
+          volumeMounts:
+            - name: data
+              mountPath: /app/server
+            - name: config-data
+              mountPath: /app/configs
+            - name: cache
+              mountPath: /temp
+            - name: black-library
+              mountPath: /black-library
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: data-pvc
+        - name: config-data
+          persistentVolumeClaim:
+            claimName: config-data-pvc
+        - name: cache
+          hostPath:
+            path: /tdarr_cache
+            type: Directory
+        - name: black-library
+          hostPath:
+            path: /media/black-library
+            type: Directory
