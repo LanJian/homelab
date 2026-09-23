@@ -7,12 +7,11 @@ services:
     network_mode: "host"
     environment:
       - TZ=Europe/London
-      - PUID=${PUID}
-      - PGID=${PGID}
+      - PUID=1000
+      - PGID=1000
       - UMASK_SET=002
       - nodeName=flamewrought-node
-      - serverIP=0.0.0.0
-      - serverPort=8266
+      - serverURL=http://192.168.50.6:8266
       - inContainer=true
       - transcodegpuWorkers=1
       - transcodecpuWorkers=2
