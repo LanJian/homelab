@@ -13,7 +13,7 @@ services:
       - nodeName=flamewrought-node
       - serverURL=http://192.168.50.6:8266
       - inContainer=true
-      - transcodegpuWorkers=1
+      - transcodegpuWorkers=2
       - transcodecpuWorkers=2
       - healthcheckgpuWorkers=1
       - healthcheckcpuWorkers=1
